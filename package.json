@@ -1,0 +1,37 @@
+{
+  "name": "jd-tickets",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "pnpm run build:cloudflare",
+    "build:next": "next build",
+    "start": "next start",
+    "build:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare populateCache local",
+    "preview": "pnpm run build && opennextjs-cloudflare preview",
+    "deploy": "pnpm run build && opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "@serwist/turbopack": "^9.5.13",
+    "dexie": "^4.4.7",
+    "dexie-react-hooks": "^4.4.0",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "serwist": "^9.5.13"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "1.20.16",
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "esbuild": "^0.28.2",
+    "esbuild-wasm": "0.28.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "4.158.0"
+  },
+  "packageManager": "pnpm@12.11.2"
+}
